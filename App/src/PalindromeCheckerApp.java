@@ -1,17 +1,21 @@
 public class PalindromeCheckerApp {
-    /*
-    Application entry Point
 
-    This is the first method executed by the JVM
-    when the program starts
+    public static void main(String[] args) {
 
-    @author Developer
-    @version 1.0
-     */
+        // Hardcoded string
+        String word = "madam";
 
-    public static  void main(String []args){
-        System.out.println("Welcome to the Palindrom Checker");
-        System.out.println("Version 1.0");
-        System.out.println("System initialised succesfully");
+        // Reverse the string
+        String reversed = "";
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed = reversed + word.charAt(i);
+        }
+
+        // Check if palindrome using if-else
+        if (word.equals(reversed)) {
+            System.out.println(word + " is a Palindrome.");
+        } else {
+            System.out.println(word + " is not a Palindrome.");
+        }
     }
 }
